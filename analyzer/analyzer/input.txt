@@ -1,6 +1,0 @@
-TYPE
-  Circle = POINTER TO CircleDesc;
-  CircleDesc = RECORD (FigureDesc)
-  radius: INTEGER
-  END;
-PROCEDURE (c: Circle) Move (dx,dy: INTEGER); BEGIN ... END Move;
