@@ -1,0 +1,89 @@
+LIBRARY
+    dict/misspell/libs/splitters
+
+DESCRIPTION
+    Contains various splitters, that implement ISplitter interface, which is used to re-split
+    phrases, like this:
+
+        ["chooses", "pain"] -> ["choose", "spain"],
+
+    assuming, that touristic "choose spain" is more statistically likely, than a creepy
+    "chooses pain". Usually, splitters first join input phrase into a string without spaces, and
+    then start splitting from scratch:
+
+        ["chooses", "pain"] -> "choosespain" -> ["choose", "spain"]
+
+    ISplitter is used to re-split phrases in TSplitRule in libmisspell/split_rule.cpp
+
+CONTENTS
+    Main file (>> splitter.h <<);
+        Declares ISplitter and functions for creating different kinds of splitters:
+        CreateX(bigrams). 'X' can be either StandardSplitter or Wordbreaker{2,3}.
+
+        Splitters should return iterators (ISplitResultsIterator*) as a result of their work.
+        There should be no phrases, matching original query in the split variants, that iterator
+        yields. To help implement iterators, there are some helper functions in
+        >> result_iterators.{h,cpp} <<, which allow to filter unwanted results from an iterator
+        and construct iterator yielding all elements from a vector.
+
+        The following table compares available splitters:
+
+        Class               Algorithm        Order of N-grams (effective) Max generated variants
+        ------------------- ---------------- ---------------------------- ----------------------
+        TStandardSplitter   Custom           2                            1
+        TWordbreaker        Viterbi          2                            Unlimited
+        TWordbreaker{2,3}   Viterbi (greedy) 2 or 3                       2
+
+
+    Standard splitter (>> standard_splitter.{h,cpp} <<):
+        Implements TStandardSplitter and its TStandardSplitter::TRequest, inherited from
+        ISplitResultsIterator. Standard splitter uses custom splitting algorithm with numerous
+        heuristic improvements.
+
+    Wordbreaker (>> wordbreaker_splitter.{h,cpp} <<):
+        Implements TWordbreakerSplitter, which is wrapper for TWordbreaker from
+        dict/proof/wordbreaker/lib/wordbreaker.h. TWordbreaker is exactly a splitter, but with an
+        interface, different from ISplitter. TWordbreaker uses Viterbi algorithm on bigram
+        language model.
+
+    Wordbreaker2 and Wordbreaker3 (>> wordbreaker{2,3}.cpp <<):
+        TWordbreaker2 and TWordbreaker3 are the same template -- TWordbreakerT, instantiated with
+        TViterbiSolver2 and TViterbiSolver3; TWordbreakerT is a mere wrapper for these solvers.
+        TViterbiSolver2 uses word bigrams, while TViterbiSolver3 uses word trigrams.
+
+        wordbreaker{2,3}.cpp implement TViterbiSolver{2,3} classes; solvers, in turn, also share a
+        common base - TViterbiSolverBase, and those parts of solvers, that reside in
+        wordbreaker{2,3}.cpp are specific for a bigram or trigram solver. TViterbiSolverBase is
+        the shared part of both solvers, it's responsible for creating common infrastructure, and
+        it is implemented in >> viterbi_solver_base.{h,cpp} <<.
+
+        An order, in which one should read the files that correspond to TWordbreaker{2,3} is the
+        following:
+
+            1) Both splitters use TLanguageModelForSplitting (instead of bigrams) as a language
+               model, file >> language_model_for_splitting.{h,cpp} <<. Model does weight backoff
+               for long OOV numbers, and has some splitting-specific performance improvements,
+               which enforce some limitations on word lengths;
+
+            2) Both splitters are wrappers for actual solvers TViterbiSolver{2,3}; solvers share
+               common base TViterbiSolverBase, file >> viterbi_solver_base.{h,cpp} <<, and differ
+               only in a way they compute a matrix of internal weights;
+
+            3) Already mentioned wordbreaker{2,3}.{h,cpp} -- for TViterbiSolver2 and
+               TViterbiSolver3.
+
+        Notes:
+            1) TWordbreaker3 uses trigram model, works substantially slower, than TWordbreaker2,
+               and lacks some features. Therefore, it should be considered an experiment.
+
+            2) TWordbreaker2 generates 2 splitting variants, and then checks, which is better by
+               trigram language model. So, it doesn't fully use trigram model (as TWordbreaker3
+               does), but is does benefit from trigrams (in a way).
+
+NOTES
+    TWordbreaker2 is currently used in production: it replaced previously used TStandardSplitter.
+    Wordbreaker, though, works worse, when trigrams are not available for the final check of two
+    generated split variants (see notes on Wordbreaker2 and Wordbreaker3): TWordbreaker2 tends to
+    join words together, especially digits and words. So, when trigrams are not available, and/or
+    output of ISplitter is not further checked by some kind of variant ranker, TStandardSplitter
+    is a good choice, since it yields more stable results.

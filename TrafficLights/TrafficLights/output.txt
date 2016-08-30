@@ -1,0 +1,91 @@
+Tigunova Anna
+Arrival rate:   10 cars per minute
+Departure:      5 seconds per car
+Runime:         5 minutes
+Time increment: 10 milliseconds
+Light sequence: Red 10 seconds; Green 10 seconds
+Average length: 18 cars
+Maximum length: 31 cars
+Average wait:   85 seconds
+Maximum wait:   180 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      1 seconds per car
+Runime:         10 minutes
+Time increment: 100 milliseconds
+Light sequence: Red 30 seconds; Green 30 seconds
+Average length: 6 cars
+Maximum length: 11 cars
+Average wait:   35 seconds
+Maximum wait:   40 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      10 seconds per car
+Runime:         50 minutes
+Time increment: 120000 milliseconds
+Light sequence: Red 10 seconds; Green 10 seconds
+Average length: 5 cars
+Maximum length: 11 cars
+Average wait:   240 seconds
+Maximum wait:   120 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      2 seconds per car
+Runime:         10 minutes
+Time increment: 100 milliseconds
+Light sequence: Red 30 seconds; Green 30 seconds
+Average length: 7 cars
+Maximum length: 11 cars
+Average wait:   40 seconds
+Maximum wait:   50 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      3 seconds per car
+Runime:         10 minutes
+Time increment: 100 milliseconds
+Light sequence: Red 30 seconds; Green 30 seconds
+Average length: 12 cars
+Maximum length: 20 cars
+Average wait:   66 seconds
+Maximum wait:   114 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      5 seconds per car
+Runime:         5 minutes
+Time increment: 10 milliseconds
+Light sequence: Red 40000 seconds; Green 10 seconds
+Average length: 33 cars
+Maximum length: 55 cars
+Average wait:   127 seconds
+Maximum wait:   300 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      1 seconds per car
+Runime:         10 minutes
+Time increment: 100 milliseconds
+Light sequence: Red 0 seconds; Green 30 seconds
+Average length: 1 cars
+Maximum length: 11 cars
+Average wait:   5 seconds
+Maximum wait:   11 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      600 seconds per car
+Runime:         10 minutes
+Time increment: 100 milliseconds
+Light sequence: Red 30 seconds; Green 30 seconds
+Average length: 55 cars
+Maximum length: 101 cars
+Average wait:   226 seconds
+Maximum wait:   600 seconds
+
+Arrival rate:   10 cars per minute
+Departure:      4 seconds per car
+Runime:         10 minutes
+Time increment: 100 milliseconds
+Light sequence: Red 30 seconds; Green 30 seconds
+Average length: 22 cars
+Maximum length: 38 cars
+Average wait:   111 seconds
+Maximum wait:   226 seconds
+

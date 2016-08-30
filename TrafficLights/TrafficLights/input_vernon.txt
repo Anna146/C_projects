@@ -1,0 +1,25 @@
+4
+Arrival   10
+Departure 1
+Runtime   10
+Increment 100
+Red       30
+Green     30
+Arrival   10
+Departure 2
+Runtime   10
+Increment 100
+Red       30
+Green     30
+Arrival   10
+Departure 3
+Runtime   10
+Increment 100
+Red       30
+Green     30
+Arrival   10
+Departure 4
+Runtime   10
+Increment 100
+red       30
+GREEN     30

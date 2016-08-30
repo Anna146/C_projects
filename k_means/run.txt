@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export OMP_NUM_THREADS=4
+echo $OMP_NUM_THREADS
+g++ -fopenmp -o kmeans kmeans.cpp
+./kmeans 30 input.txt out.txt

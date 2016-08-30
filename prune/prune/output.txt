@@ -1,0 +1,58 @@
+Tigunova Anna
+1
+240
+Morgan
+Cars r Us
+Top Bike Shop
+The Hot Chocolate Emporium
+Everything Electronic
+Morgan
+
+2
+8
+Morgan
+Cars r Us
+far away
+Top Bike Shop
+Morgan
+
+3
+6
+Morgan
+A
+B
+C
+D
+E
+Morgan
+
+4
+7
+Morgan
+B
+A
+C
+Morgan
+
+5
+4
+Morgan
+C
+B
+A
+Morgan
+
+6
+11
+Morgan
+A
+Morgan
+
+7
+4
+Morgan
+C
+B
+A
+Morgan
+

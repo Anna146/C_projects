@@ -1,0 +1,229 @@
+10
+Turnir1
+3
+A
+B
+C
+3
+A#3@2#B
+C#1@2#B
+A#3@5#C
+Turnir_2
+3
+2A
+2B
+2C
+3
+2A#1@2#2B
+2C#0@2#2B
+2A#3@1#2C
+Russian League (Turnir 3)
+3
+Rubin
+Dinamo
+Zenit
+3
+Zenit#1@2#Rubin
+Rubin#0@0#Dinamo
+Dinamo#3@1#Zenit
+Turnir__4
+3
+Barcelona
+Real Madrid
+Chelsie
+7
+Chelsie#1@2#Barcelona
+Barcelona#1@2#Real Madrid
+Chelsie#1@2#Barcelona
+Chelsie#1@2#Real Madrid
+Barcelona#0@1#Chelsie
+Real Madrid#3@1#Barcelona
+Barcelona#8@4#Real Madrid
+WORLD turnir (Turnir_5)
+4
+Barcelona
+Real Madrid
+Rubin
+Zenit
+5
+Zenit#1@2#Real Madrid
+Barcelona#0@1#Rubin
+Real Madrid#3@1#Barcelona
+Real Madrid#3@2#Zenit
+Barcelona#8@4#Real Madrid
+Another turnir (Turnir_6)
+4
+Barcelona
+Real M
+Rubin
+Zenit
+5
+Zenit#1@2#Real M
+Barcelona#0@1#Rubin
+Real M#3@1#Barcelona
+Real M#3@2#Zenit
+Barcelona#8@4#Real M
+EuroLeague (Turnir 7)
+3
+Barcelona
+Real Madrid
+Chelsie
+5
+Chelsie#3@2#Real Madrid
+Barcelona#0@1#Chelsie
+Real Madrid#3@1#Barcelona
+Real Madrid#3@2#Chelsie
+Barcelona#8@6#Real Madrid
+EuroLiga (Turnir 8)
+5
+Barcelona
+Real Madrid
+Liverpool
+M United
+Milan
+6
+Milan#3@2#Real Madrid
+Barcelona#0@1#M United
+Real Madrid#3@1#Barcelona
+Milan#3@2#Liverpool
+Barcelona#8@6#Real Madrid
+Liverpool#8@6#M United
+Euro again (Tur _ 9)
+2
+Barcelona
+Real Madrid
+1
+Real Madrid#3@4#Barcelona
+MAIN TOURNAMENT (Turnir 10)
+30
+Barcelona
+Real Madrid
+Chelsie
+Arsenal
+Milan
+M United
+Atletiko
+Lion
+Ayaks
+Rubin
+Zenit
+Spartak
+Dinamo
+CSKA
+Inter
+Bavaria
+Celtik
+Valencia
+PAOK
+Minsk
+Sporting
+Saragosa
+Atlanta
+Uventus
+Kuban
+Terek
+Amkar
+Anji
+Limerik
+Hetafe
+100
+Chelsie#3@4#Real Madrid
+Barcelona#1@2#Chelsie
+Real Madrid#3@3#Barcelona
+Atletiko#3@2#Milan
+M United#4@2#Lion
+Lion#7@6#Ayaks
+Arsenal#9@10#Ayaks
+Zenit#3@1#Barcelona
+CSKA#3@2#Chelsie
+CSKA#8@6#Zenit
+Ayaks#3@2#Real Madrid
+Ayaks#0@1#Chelsie
+Real Madrid#3@1#Zenit
+Zenit#3@2#Chelsie
+Barcelona#8@6#Real Madrid
+Chelsie#3@2#Real Madrid
+Barcelona#0@1#Dinamo
+Real Madrid#3@1#Barcelona
+Real Madrid#3@2#Chelsie
+Barcelona#8@6#Dinamo
+Chelsie#3@2#Real Madrid
+Barcelona#0@1#Chelsie
+Real Madrid#3@1#M United
+M United#3@2#Chelsie
+Dinamo#8@6#CSKA
+Dinamo#3@2#Real Madrid
+Dinamo#0@1#Chelsie
+Rubin#3@1#CSKA
+Real Madrid#3@2#Rubin
+Barcelona#8@6#Real Madrid
+Chelsie#3@4#Rubin
+Barcelona#0@1#Chelsie
+Rubin#3@1#Atletiko
+Real Madrid#3@1#Chelsie
+Milan#8@6#Real Madrid
+Spartak#3@2#Real Madrid
+Arsenal#0@1#Atletiko
+CSKA#3@7#Barcelona
+Real Madrid#7@2#Chelsie
+Arsenal#8@6#Spartak
+Ayaks#3@2#Spartak
+Barcelona#0@1#Milan
+Ayaks#3@1#Barcelona
+Real Madrid#3@2#Spartak
+Arsenal#8@6#Milan
+Atletiko#3@2#Real Madrid
+Barcelona#0@1#Atletiko
+Spartak#3@4#Ayaks
+M United#3@2#Chelsie
+Spartak#8@12#M United
+Minsk#8@6#Celtik
+Bavaria#3@2#Minsk
+Minsk#0@1#Celtik
+Celtik#3@7#Bavaria
+Inter#7@2#Chelsie
+Valencia#8@6#Inter
+Valencia#3@2#Inter
+Valencia#0@1#PAOK
+Bavaria#3@1#PAOK
+PAOK#3@2#Celtik
+PAOK#8@6#Valencia
+Spartak#3@2#Valencia
+Inter#0@1#Minsk
+Valencia#3@7#Inter
+Real Madrid#7@2#Inter
+Bavaria#8@6#Minsk
+PAOK#3@2#Celtik
+Celtik#0@1#PAOK
+PAOK#3@1#Minsk
+Bavaria#3@2#PAOK
+Terek#3@2#Atlanta
+Atlanta#0@1#Terek
+Hetafe#3@1#PAOK
+Terek#3@2#Celtik
+Terek#8@6#Valencia
+Spartak#3@2#Valencia
+Amkar#0@1#Minsk
+Atlanta#3@7#Kuban
+Atlanta#7@2#Kuban
+Terek#8@6#Minsk
+Terek#2@1#Atlanta
+Celtik#0@1#Hetafe
+Anji#3@1#Minsk
+Amkar#3@2#Limerik
+Uventus#1@2#Amkar
+Limerik#3@3#Uventus
+Hetafe#3@2#Uventus
+Atlanta#4@2#Anji
+Sporting#7@6#Limerik
+Arsenal#9@10#Anji
+Zenit#3@1#Kuban
+Sporting#3@2#Chelsie
+Saragosa#8@6#Sporting
+Uventus#3@2#Hetafe
+Saragosa#0@1#Kuban
+Saragosa#3@1#Limerik
+Anji#3@2#Sporting
+Kuban#8@6#Sporting
+Anji#3@2#Saragosa
+Hetafe#0@1#Saragosa
