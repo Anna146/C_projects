@@ -1,1 +1,0 @@
-Parts of splitter - spit-join misspell corrector. Bachelor's thesis MIPT 2015
